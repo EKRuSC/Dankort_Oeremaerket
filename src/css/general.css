@@ -1,0 +1,43 @@
+/*----------| STYLE RESET |----------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+/*----------+----------+----------*/
+
+/*----------| PAGE |----------*/
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rlh;
+}
+header {
+  height: 6rlh;
+  padding: 0 4rlh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rlh;
+  align-items: center;
+}
+main {
+  padding: 0 12rlh;
+  display: flex;
+  flex-direction: column;
+  gap: 10rlh;
+}
+footer {
+  height: fit-content;
+  max-width: calc(100vw - 2rlh);
+  margin: 1rlh;
+  margin-top: 8rlh;
+  padding: 2rlh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rlh;
+}
+/*----------+----------+----------*/

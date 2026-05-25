@@ -1,0 +1,52 @@
+---
+import CtaButton from "./cta_button.astro";
+---
+
+<section>
+  <h2>Øremærkets kampagner</h2>
+  <div class="container">
+    <div class="post">
+      <CtaButton text="Link 1" />
+    </div>
+    <div class="post">
+      <CtaButton text="Link 2" />
+    </div>
+    <div class="post">
+      <CtaButton text="Link 3" />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rlh;
+    text-align: center;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rlh;
+    }
+
+    .post {
+      aspect-ratio: 3/5;
+      padding: 2rlh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      /*| STYLING |*/
+      border-radius: 2rlh;
+      background-color: var(--lime-green_1);
+      /*-----*/
+      .cta_button {
+        width: 50%;
+        padding: 2rlh;
+        /*| STYLING |*/
+        border-radius: 2rlh;
+        background-color: var(--øremærke-gul);
+      }
+    }
+  }
+</style>

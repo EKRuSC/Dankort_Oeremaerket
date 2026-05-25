@@ -1,0 +1,51 @@
+<footer>
+  <img src="src/assets/DK_Logo_CMYK_Margin.png" alt="Logo" />
+  <p id="certificates" class="p_foot">*Certifikater*</p>
+  <div class="links">
+    <p class="p_foot">FAQ</p>
+    <p class="p_foot">Support</p>
+    <p class="p_foot">Politikker</p>
+  </div>
+  <div class="icons">
+    <p>IG</p>
+    <p>FB</p>
+    <p>YT</p>
+  </div>
+</footer>
+
+<style>
+  img {
+    width: 100%;
+    max-width: 20rlh;
+    margin: -2rlh 0 0 -2rlh;
+    outline: 1px solid #0f0;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rlh;
+    justify-content: space-around;
+    align-items: end;
+  }
+
+  #certificates {
+    grid-row: 2/3;
+    align-self: end;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rlh;
+    justify-content: end;
+    p {
+      width: fit-content;
+      aspect-ratio: 1/1;
+      padding: 1rlh;
+      display: flex;
+      justify-content: center;
+      /*| STYLING |*/
+      border: 1px solid var(--white);
+      border-radius: 25%;
+    }
+  }
+</style>

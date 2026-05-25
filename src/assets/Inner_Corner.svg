@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916666"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Inner_Corner.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#777777"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showborder="false"
+     inkscape:zoom="3.0325"
+     inkscape:cx="51.937345"
+     inkscape:cy="119.53833"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="matrix(1.3333333,0,0,1.3333333,-8.8194432,-8.8194432)"
+     style="stroke-width:0.75">
+    <path
+       id="rect1"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.99219;stroke-linecap:round;stroke-miterlimit:4.5;paint-order:fill markers stroke"
+       d="M 6.6145832,6.6145832 V 46.302082 H 46.302082 A 39.6875,39.6875 0 0 1 6.6145832,6.6145832 Z" />
+  </g>
+</svg>

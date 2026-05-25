@@ -1,0 +1,97 @@
+---
+import CtaButton from "./cta_button.astro";
+---
+
+<section>
+  <h2>Se din egen indflydelse</h2>
+  <div class="container">
+    <form action="myImpact">
+      <label for="form">Log ind:</label>
+      <input name="username" type="text" placeholder="Brugernavn" />
+      <input name="password" type="text" placeholder="Kodeord" />
+      <button>Enter</button>
+    </form>
+    <div class="content">
+      <h3>Mit Øremærke</h3>
+      <div class="text">
+        <p class="p_standard">Her kan du følge dine egne bidrag og se, hvordan dine daglige betalinger bliver en del af fællesskabets samlede indsats.</p>
+        <p class="p_standard">Over tid kan små handlinger blive til noget, du faktisk kan følge.</p>
+      </div>
+      <CtaButton text="Gå til Mit Øremærke" link="myImpact" />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rlh;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rlh;
+
+      form {
+        padding: 2rlh;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rlh;
+        /*| STYLING |*/
+        border: none;
+        border-radius: 2rlh;
+        background-color: var(--grey_2);
+        /*-----*/
+        label {
+          font-size: 24px;
+          font-weight: 800;
+          color: var(--white);
+        }
+        input {
+          grid-column: 1;
+          padding: 1rlh 2rlh;
+          /*| STYLING |*/
+          border: none;
+          border-radius: 2rlh;
+          font-weight: 800;
+        }
+        button {
+          grid-column: 2;
+          grid-row: 2/4;
+          height: 100%;
+          height: 100%;
+          width: fit-content;
+          padding: 2rlh;
+          align-self: center;
+          /*| STYLING |*/
+          border: none;
+          border-radius: 2rlh;
+          background-color: var(--grey_4);
+        }
+      }
+
+      .content {
+        padding: 0 2rlh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /*-----*/
+        h3 {
+          text-align: center;
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          gap: 1rlh;
+        }
+        .cta_button {
+          align-self: center;
+          /*| STYLING |*/
+          background-color: var(--dankort-rød);
+          color: var(--white);
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+import CtaButton from "./cta_button.astro";
+---
+
+<section>
+  <h2>Små bidrag - Fælles betydning</h2>
+  <div class="content">
+    <div class="text">
+      <p class="p_standard">Mange tænker ikke over hvilket betalingskort de bruger i hverdagen. Med Dankort Øremærket bliver daglige betalinger til små bidrag, der sammen kan gøre en forskel.</p>
+      <p class="p_standard">
+        Hver gang du bruger Dankort, går 1 øre til initiativer, der støtter natur, lokale fællesskaber og danske formål. Ét øre virker måske småt alene. Men når mange bruger Dankort i hverdagen, kan
+        små bidrag vokse over tid.
+      </p>
+      <p class="p_standard">På vores impact dashboard kan du se, hvordan donationerne udvikler sig over tid. Her bliver fællesskabets samlede bidrag visualiseret gennem tal og konkrete eksempler.</p>
+    </div>
+    <div id="temp_icon"><p class="p_temp">1 ØRE</p></div>
+  </div>
+  <CtaButton text="Bliv en del af fællesskabet" link="about" />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rlh;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /*-----*/
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rlh;
+    }
+    #temp_icon {
+      padding: 2rlh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .p_temp {
+        height: fit-content;
+        width: fit-content;
+        padding: 1rlh;
+        font-size: 50px;
+        background-color: var(--øremærke-gul);
+        transform: rotate(15deg);
+      }
+    }
+  }
+
+  * {
+    .cta_button {
+      background-color: var(--dankort-rød);
+      color: var(--white);
+    }
+  }
+</style>

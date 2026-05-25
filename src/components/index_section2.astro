@@ -1,0 +1,53 @@
+---
+import CtaButton from "./cta_button.astro";
+---
+
+<section>
+  <h2>Donationsbeløb 2026</h2>
+  <div class="dashboard">
+    <div>
+      <p class="p_counter">200.000.000 øre</p>
+    </div>
+    <CtaButton text="Følg udviklingen" link="community" />
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rlh;
+    .dashboard {
+      padding: 1rlh;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rlh;
+      align-items: center;
+      /*| STYLING |*/
+      background-color: var(--grey_2);
+      border-radius: 2rlh;
+
+      div {
+        height: fit-content;
+        width: 100%;
+        padding: 1rlh;
+        /*| STYLING |*/
+        background-color: var(--white);
+        border-radius: 2rlh;
+        /*-----*/
+        .p_counter {
+          text-align: center;
+          font-size: 64px;
+          font-weight: 800;
+        }
+      }
+
+      .cta_button {
+        margin: 0 1rlh;
+        /*| STYLING |*/
+        background-color: var(--dankort-rød);
+        color: var(--white);
+      }
+    }
+  }
+</style>

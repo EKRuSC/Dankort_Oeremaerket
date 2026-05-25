@@ -1,0 +1,175 @@
+<section>
+  <h2>Fællesskabets udvikling</h2>
+  <div class="container">
+    <div class="top">
+      <div class="sorting_values">
+        <h3>København</h3>
+        <h3>Maj 2026</h3>
+      </div>
+      <p class="p_standard">Her ser du, hvordan Dankort Øremærkets donationer vokser<br />- takket være daglige betalinger fra unge som dig.</p>
+    </div>
+    <div class="bottom">
+      <!-- -->
+      <div class="info">
+        <!-- -->
+        <div id="donation">
+          <div class="value">
+            <p class="p_value">200.000.000 øre</p>
+          </div>
+        </div>
+        <p class="p_info">Som svarer til:</p>
+        <p class="p_info">Eller:</p>
+        <div id="area">
+          <div class="value">
+            <p class="p_value">800 m²</p>
+            <p class="p_unit">skovareal</p>
+          </div>
+        </div>
+        <div id="conversion">
+          <div class="value">
+            <p class="p_value">20</p>
+            <p class="p_unit">fodboldbaner</p>
+          </div>
+        </div>
+        <!-- -->
+      </div>
+      <!-- -->
+      <form action="sort">
+        <label for="sort">Sortér efter:</label>
+        <select name="city" id="city">
+          <option value="default">- By</option>
+          <option value="København">København</option>
+          <option value="Roskilde">Roskilde</option>
+        </select>
+        <select name="time" id="time">
+          <option value="default">- Tidsrum</option>
+          <option value="For året">For året</option>
+          <option value="For måneden">For måneden</option>
+          <option value="For ugen">For ugen</option>
+        </select>
+        <select name="goal" id="goal">
+          <option value="default">- Mål</option>
+          <option value="Hals mose">Hals mose</option>
+        </select>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .p_value {
+    font-size: 64px;
+    font-weight: 800;
+  }
+  .p_unit {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .p_info {
+    font-weight: 800;
+  }
+  label {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  section {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rlh;
+
+    .container {
+      height: fit-content;
+      padding: 2rlh;
+      display: flex;
+      flex-direction: column;
+      gap: 2rlh;
+      /*| STYLING |*/
+      border-radius: 2rlh;
+      background-color: var(--grey_2);
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rlh;
+      /*-----*/
+      .sorting_values {
+        padding-bottom: 1rlh;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        /*| STYLING |*/
+        color: var(--white);
+        border-bottom: 2px solid var(--white);
+        h3 {
+          height: fit-content;
+          width: 100%;
+        }
+      }
+      .p_standard {
+        margin: -2rlh -2rlh 0 0;
+        padding: 1rlh 1rlh 2rlh 2rlh;
+        /*| STYLING |*/
+        border-bottom-left-radius: 2rlh;
+        background-color: var(--baggrund);
+      }
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: 5fr 2fr;
+      gap: 4rlh;
+
+      .info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr auto 1fr;
+        column-gap: 2rlh;
+        row-gap: 1rlh;
+        /*-----*/
+        .value {
+          height: 100%;
+          padding: 1rlh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          /*| STYLING |*/
+          border-radius: 2rlh;
+          background-color: var(--white);
+        }
+        #donation {
+          grid-column: 1/3;
+        }
+        .p_info {
+          padding: 1rlh 0 0 1rlh;
+          /*| STYLING |*/
+          color: var(--white);
+        }
+      }
+
+      form {
+        height: fit-content;
+        padding: 2rlh;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rlh;
+        /*| STYLING |*/
+        border-radius: 2rlh;
+        background-color: var(--øremærke-gul);
+        /*-----*/
+        select {
+          padding: 1rlh;
+          /*| STYLING |*/
+          border: none;
+          border-radius: 2rlh;
+          color: var(--øremærke-gul);
+          font-weight: 800;
+        }
+      }
+    }
+  }
+</style>

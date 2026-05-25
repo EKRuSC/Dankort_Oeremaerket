@@ -1,0 +1,17 @@
+---
+const { link } = Astro.props;
+const { text } = Astro.props;
+---
+
+<a class="cta_button" href={link}><p class="p_cta">{text}</p></a>
+
+<style>
+  .cta_button {
+    height: fit-content;
+    width: fit-content;
+    padding: 1rlh 2rlh;
+    /*| STYLING |*/
+    border-radius: 100rlh;
+    background-color: var(--grey_4);
+  }
+</style>

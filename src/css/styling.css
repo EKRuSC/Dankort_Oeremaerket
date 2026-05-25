@@ -1,0 +1,31 @@
+/*----------| PAGE |----------*/
+body {
+  background-color: var(--baggrund);
+}
+header {
+  background-color: var(--sunflower_0);
+}
+footer {
+  background-color: var(--grey_2);
+  color: var(--white);
+  border-radius: 2rlh;
+}
+/*----------+----------+----------*/
+
+/*----------| ELEMENTS |----------*/
+.cta_button:hover {
+  scale: 1.025;
+  filter: saturate(1.5);
+}
+.cta_button:active {
+  scale: 1;
+  filter: brightness(0.9);
+}
+/*----------+----------+----------*/
+
+/*----------| ADJUSTMENTS |----------*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*----------+----------+----------*/

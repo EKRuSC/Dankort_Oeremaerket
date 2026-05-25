@@ -1,0 +1,50 @@
+---
+import CtaButton from "./cta_button.astro";
+---
+
+<section>
+  <h2>Samarbejdet med<br />Den Danske Naturfond</h2>
+  <p class="p_standard">Gennem samarbejdet med Den Danske Naturfond hjælper Dankort med at give den danske natur mere plads til at gro og leve vildt.</p>
+  <CtaButton text="Se hvordan de arbejder" link="https://naturfonden.dk" />
+</section>
+
+<style>
+  section {
+    aspect-ratio: 2/1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4rlh;
+    /*| STYLING |*/
+    border-radius: 2rlh;
+    background-color: var(--lime-green_1);
+
+    h2 {
+      height: fit-content;
+      padding: 1rlh 2rlh 2rlh 0;
+      /*| STYLING |*/
+      border-bottom-right-radius: 2rlh;
+      background-color: var(--baggrund);
+    }
+
+    .p_standard {
+      grid-column: 3;
+      grid-row: 2;
+      width: fit-content;
+      padding: 2rlh 1rlh 1rlh 2rlh;
+      align-self: flex-end;
+      text-align: center;
+
+      /*| STYLING |*/
+      border-top-left-radius: 2rlh;
+      background-color: var(--baggrund);
+    }
+
+    .cta_button {
+      grid-row: 2;
+      margin: 2rlh;
+      align-self: flex-end;
+      /*| STYLING |*/
+      background-color: var(--øremærke-gul);
+    }
+  }
+</style>
