@@ -25,15 +25,15 @@ header {
   align-items: center;
 }
 main {
-  padding: 0 12rlh;
+  padding: 0 12vw;
   display: flex;
   flex-direction: column;
   gap: 10rlh;
 }
 footer {
   height: fit-content;
-  max-width: calc(100vw - 2rlh);
-  margin: 1rlh;
+  max-width: calc(100vw - 2vw);
+  margin: 2vw;
   margin-top: 8rlh;
   padding: 2rlh;
   display: grid;
