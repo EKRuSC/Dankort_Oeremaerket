@@ -11,18 +11,20 @@ const videoUrl = supaReq.ok ? supaReq.url : null;
 ---
 
 <section class="hero">
-    {videoUrl && (
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src={videoUrl} type="video/mp4" />
-    </video>
-  )}
+  {
+    videoUrl && (
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src={videoUrl} type="video/mp4" />
+      </video>
+    )
+  }
   <h1 class="h1_hero">Dankort Øremærket</h1>
   <p class="p_imgtext">Små betalinger kan blive til noget større, når vi handler sammen</p>
   <CtaButton text="Læs mere om Dankort Øremærket" link="about" />
 </section>
 
 <style>
- .hero {
+  .hero {
     position: relative;
     min-height: calc(100vh - 16rlh);
     max-width: 88vw;
@@ -43,7 +45,7 @@ const videoUrl = supaReq.ok ? supaReq.url : null;
     object-fit: cover;
     z-index: 0;
   }
-    h1,
+  h1,
   .p_imgtext,
   * .cta_button {
     position: relative;
