@@ -1,4 +1,13 @@
-<section>
+---
+const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+
+const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/Nature/kriemer-denmark-1619101_1920.jpg", {
+  headers: { apikey: key },
+});
+const imgUrl = supaReq.ok ? supaReq.url : null;
+---
+
+<section style={imgUrl ? `background-image: url(${imgUrl})` : ""}>
   <h1>Gør dine daglige betalinger til en del af noget større</h1>
 </section>
 
@@ -6,8 +15,8 @@
   section {
     aspect-ratio: 3/1;
     padding: 2rlh;
-    /*| STYLING |*/
     border-radius: 2rlh;
-    background-color: var(--lime-green_1);
+    background-size: cover;
+    background-position: center;
   }
 </style>

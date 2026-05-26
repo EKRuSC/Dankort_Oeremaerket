@@ -1,22 +1,51 @@
 ---
 import CtaButton from "./cta_button.astro";
+
+// Fetch video URL from Supabase Storage
+const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+
+const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/HeroVids/0_Hiking_Forest_1080.mp4", {
+  headers: { apikey: key },
+});
+const videoUrl = supaReq.ok ? supaReq.url : null;
 ---
 
 <section class="hero">
+    {videoUrl && (
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src={videoUrl} type="video/mp4" />
+    </video>
+  )}
   <h1 class="h1_hero">Dankort Øremærket</h1>
   <p class="p_imgtext">Små betalinger kan blive til noget større, når vi handler sammen</p>
   <CtaButton text="Læs mere om Dankort Øremærket" link="about" />
 </section>
 
 <style>
-  .hero {
+ .hero {
+    position: relative;
     min-height: calc(100vh - 16rlh);
     margin: 0 -6vw;
     padding: 2rlh;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     border-radius: 2rlh;
-    background-color: var(--lime-green_1);
+    overflow: hidden;
+  }
+
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+    h1,
+  .p_imgtext,
+  * .cta_button {
+    position: relative;
+    z-index: 1;
   }
   h1 {
     grid-column: 1/3;
