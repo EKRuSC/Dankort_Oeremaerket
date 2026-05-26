@@ -1,9 +1,16 @@
+---
+import NavScript from "../js/nav_script.astro";
+---
+
+<NavScript />
+
 <header>
   <div class="logo_wrapper">
     <img src="src/assets/DK_Logo_CMYK_Margin.png" alt="Logo" />
   </div>
   <nav>
-    <a href="/"><p class="p_nav">Dankort Øremærket</p></a>
+    <a href="/"><p class="p_nav">Forside</p></a>
+    <a href="/about"><p class="p_nav">Om Øremærket</p></a>
     <a href="/community"><p class="p_nav">Fællesskabet</p></a>
     <a href="/myImpact"><p class="p_nav">Mit Øremærke</p></a>
   </nav>
@@ -12,23 +19,52 @@
 <style>
   .logo_wrapper {
     height: inherit;
-    width: 100%;
     img {
       height: 100%;
     }
   }
+
   nav {
     height: 100%;
-    width: 100%;
+    width: fit-content;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rlh;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rlh;
+    /*-----*/
     a {
       height: 100%;
       width: 100%;
+      padding: 1rlh;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    /*-----*/
+    .active {
+      p {
+        margin-top: calc(1rlh + 3px);
+        padding-bottom: 1rlh;
+        /*| STYLING |*/
+        border-bottom: 3px solid var(--grey_0);
+      }
+      /*| STYLING |*/
+    }
+  }
+
+  @media screen and (width <= 1132px) {
+    header {
+      justify-content: center;
+    }
+    nav {
+      height: 6rlh;
+      width: 100vw;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      gap: 0;
+      text-align: center;
+      /*| STYLING |*/
+      background-color: var(--sunflower_1);
     }
   }
 </style>
