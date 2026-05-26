@@ -18,10 +18,10 @@ body {
 }
 header {
   height: 6rlh;
-  padding: 0 4rlh;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1rlh;
+  width: 100vw;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 main {
@@ -39,5 +39,10 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rlh;
+}
+@media screen and (width <= 1132px) {
+  footer {
+    margin-bottom: calc(2vw + 6rlh);
+  }
 }
 /*----------+----------+----------*/
