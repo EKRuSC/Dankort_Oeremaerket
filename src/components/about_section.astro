@@ -1,0 +1,53 @@
+---
+import CtaButton from "./cta_button.astro";
+---
+
+<section>
+  <h2>Om Dankort Øremærket</h2>
+  <div class="content">
+    <div class="text">
+      <p class="p_standard">
+        Dankort Øremærket er et initiativ iværksat af Dankort med formål om at
+        styrke den danske vilde natur gennem pengedonationer til Den Danske
+        Naturfond. Dankort, ejet af Nexi Group, donerer 1 øre pr. gennemført
+        betaling med et Dankort til Den Danske Naturfond. Det betyder, at alle
+        betalinger gennemført med et Dankort udløser et bidrag på 1 øre – både
+        for køb foretaget i en fysisk butik/selvbetjeningsløsning eller i en
+        webshop, og uanset om der betales med et fysisk Dankort eller et
+        virtuelt Dankort i en wallet.
+      </p>
+      <p class="p_standard">
+        Dankort donerer minimum 10 mio. kr. årligt til Den Danske Naturfond,
+        uanset hvor mange betalinger der sker med Dankort. Udover Dankort,
+        bidrager initiativets partnere med donationer til Den Danske Naturfond –
+        ligeledes med 1 øre pr. gennemført Dankort transaktion.
+      </p>
+    </div>
+  </div>
+  <CtaButton text="Log på Mit Øremærke" link="myImpact" />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rlh;
+  }
+
+  .content {
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rlh;
+    }
+  }
+
+  * {
+    .cta_button {
+      align-self: flex-end;
+      justify-self: flex-end;
+      background-color: var(--dankort-rød);
+      color: var(--white);
+    }
+  }
+</style>
