@@ -1,0 +1,75 @@
+---
+import MyDashboard from "./my_dashboard.astro";
+---
+
+<section>
+  <MyDashboard />
+  <!--| Midlertidigt segment. Udskiftes med component |-->
+  <div class="badges">
+    <p class="p_imgtext">Badges</p>
+    <div class="container">
+      <div class="badge"><p class="p_imgtext">1</p></div>
+      <div class="badge"><p class="p_imgtext">2</p></div>
+      <div class="badge"><p class="p_imgtext">3</p></div>
+      <div class="badge"><p class="p_imgtext">4</p></div>
+      <div class="badge"><p class="p_imgtext">5</p></div>
+      <div class="badge"><p class="p_imgtext">6</p></div>
+    </div>
+  </div>
+  <!--+----------+----------+----------+----------+----------+-->
+</section>
+
+<style>
+  section {
+    height: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 4rlh;
+    /*-----*/
+    .my_dashboard {
+      min-width: fit-content;
+      flex-grow: 3;
+      flex-shrink: 0;
+    }
+    .badges {
+      height: initial;
+      overflow-y: scroll;
+      min-width: fit-content;
+      flex-grow: 2;
+      flex-shrink: 1;
+    }
+  }
+
+  /*| Midlertidigt segment. Udskiftes med component |*/
+  .badges {
+    padding: 2rlh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rlh;
+    text-align: center;
+    /*| STYLING |*/
+    border-radius: 2rlh;
+    background-color: var(--øremærke-gul);
+
+    .container {
+      height: fit-content;
+      gap: 1rlh;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 5rlh);
+      justify-content: center;
+      /*-----*/
+      .badge {
+        aspect-ratio: 1/1;
+        width: 5rlh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*| STYLING |*/
+        border-radius: 100rlh;
+        background-color: var(--white);
+      }
+    }
+  }
+  /*----------+----------+----------+----------+----------*/
+</style>

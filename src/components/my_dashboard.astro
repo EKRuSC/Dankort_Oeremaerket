@@ -1,0 +1,116 @@
+<div class="my_dashboard">
+  <h2>Mit Øremærke</h2>
+  <p class="p_value">20.000 øre</p>
+  <div class="progress">
+    <p class="p_desc">Beløb for i år</p>
+    <div class="progBar_container">
+      <div class="progBar"></div>
+    </div>
+    <p class="p_desc" id="percentage">20%</p>
+    <p class="p_desc" id="goal">Skovbevis</p>
+  </div>
+  <div class="favourites">
+    <p class="p_title">Favoritter</p>
+    <div class="favourite" id="fav_1">
+      <p class="p_name">Møns Klint</p>
+    </div>
+    <div class="favourite" id="fav_2">
+      <p class="p_name">Hals Mose</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .p_value {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .p_desc {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .p_title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .p_name {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .my_dashboard {
+    height: fit-content;
+    padding: 2rlh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rlh;
+    /*| STYLING |*/
+    border-radius: 2rlh;
+    background-color: var(--grey_2);
+
+    h2 {
+      width: fit-content;
+      margin: -2rlh 0 0 -2rlh;
+      padding: 1rlh 2rlh 2rlh 1rlh;
+      /*| STYLING |*/
+      border-bottom-right-radius: 2rlh;
+      background-color: var(--baggrund);
+    }
+
+    .p_value {
+      width: 100%;
+      min-width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .progress {
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rlh;
+      /*-----*/
+      .progBar_container {
+        grid-column: 1/3;
+        grid-row: 2;
+        padding: 0.25rlh;
+        /*| STYLING |*/
+        border-radius: 2rlh;
+        background-color: var(--white);
+        .progBar {
+          min-height: 1rlh;
+          height: 100%;
+          width: 20%;
+          /*| STYLING |*/
+          border-radius: 2rlh;
+          background-color: var(--øremærke-gul);
+        }
+      }
+      #percentage {
+        grid-row: 3;
+      }
+      #goal {
+        grid-row: 3;
+        text-align: end;
+      }
+    }
+
+    .favourites {
+      grid-column: 1/3;
+      display: flex;
+      flex-direction: column;
+      gap: 1rlh;
+      /*-----*/
+      .favourite {
+        padding: 1rlh;
+        /*| STYLING |*/
+        border-radius: 2rlh;
+        background-color: var(--white);
+      }
+    }
+  }
+</style>
