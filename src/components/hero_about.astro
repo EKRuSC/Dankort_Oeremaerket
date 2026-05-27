@@ -1,4 +1,13 @@
-<section>
+---
+const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+
+const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/Nature/kriemer-denmark-1619101_1920.jpg", {
+  headers: { apikey: key },
+});
+const imgUrl = supaReq.ok ? supaReq.url : null;
+---
+
+<section style={imgUrl ? `background-image: url(${imgUrl})` : ""}>
   <h1>Når vi handler sammen</h1>
 </section>
 
@@ -9,6 +18,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 2rlh;
-    background-color: var(--lime-green_1);
+     background-size: cover;
+    background-position: center;
   }
 </style>

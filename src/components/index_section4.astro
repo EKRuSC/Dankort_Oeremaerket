@@ -1,21 +1,46 @@
 ---
 import CtaButton from "./cta_button.astro";
+
+const IMAGE_URL1 = "https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/EarPortrait/M1ear0.png";
+const IMAGE_URL2 = "https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/EarPortrait/R1ear0.png";
+const VIDEO_URL = "https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/VertVids/voxpop50.mp4";
 ---
 
 <section>
   <h2>Øremærkets kampagner</h2>
   <div class="container">
-    <div class="post">
-      <CtaButton text="Link 1" />
+
+    <!-- Post 1: Image -->
+    <div class="post image-post">
+      <img src={IMAGE_URL1} alt="Kampagne billede 1" />
+      <CtaButton text="Instagram" />
     </div>
-    <div class="post">
-      <CtaButton text="Link 2" />
+
+    <!-- Post 2: Video -->
+    <div class="post video-post">
+      <video id="campaign-video" src={VIDEO_URL} preload="metadata" playsinline></video>
+      <CtaButton text="Se video" />
     </div>
-    <div class="post">
-      <CtaButton text="Link 3" />
+
+    <!-- Post 3: Image -->
+    <div class="post image-post">
+      <img src={IMAGE_URL2} alt="Kampagne billede 2" />
+      <CtaButton text="TikTok" />
     </div>
+
   </div>
 </section>
+
+<script>
+  const video = document.getElementById("campaign-video") as HTMLVideoElement;
+
+  const ctaButton = document.querySelector(".video-post .cta_button");
+  ctaButton?.addEventListener("click", (e) => {
+    e.preventDefault();
+    video.controls = true;
+    video.play();
+  });
+</script>
 
 <style>
   section {
@@ -23,6 +48,7 @@ import CtaButton from "./cta_button.astro";
     flex-direction: column;
     gap: 2rlh;
     text-align: center;
+
     .container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -39,13 +65,45 @@ import CtaButton from "./cta_button.astro";
       /*| STYLING |*/
       border-radius: 2rlh;
       background-color: var(--lime-green_1);
+      overflow: hidden;
+      position: relative;
       /*-----*/
       .cta_button {
-        width: 50%;
+        position: relative;
+        z-index: 1;
+        width: 80%;
         padding: 2rlh;
         /*| STYLING |*/
         border-radius: 2rlh;
         background-color: var(--øremærke-gul);
+      }
+    }
+
+    /* Image posts */
+    .image-post {
+      img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2rlh;
+        z-index: 0;
+      }
+    }
+
+    /* Video post */
+    .video-post {
+      video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2rlh;
+        z-index: 0;
+
+        transform: scale(1.1);
       }
     }
   }
