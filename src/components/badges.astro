@@ -1,0 +1,109 @@
+---
+const badges = [
+  {
+    id: 1,
+    icon: "/trophy_badge.svg",
+    title: "Naturhelt",
+    unlocked: true,
+  },
+
+  {
+    id: 2,
+    icon: "/leaf_badge.svg",
+    title: "Grøn støtte",
+    unlocked: true,
+  },
+
+  {
+    id: 3,
+    icon: "/heart_badge.svg",
+    title: "Miljøven",
+    unlocked: false,
+  },
+
+  {
+    id: 4,
+    icon: "/tree_badge.svg",
+    title: "Supporter",
+    unlocked: false,
+  },
+
+  {
+    id: 5,
+    icon: "/star_badge.svg",
+    title: "Donor",
+    unlocked: false,
+  },
+
+  {
+    id: 6,
+    icon: "/earth_badge.svg",
+    title: "Impact",
+    unlocked: false,
+  },
+];
+---
+
+<section class="badges-section">
+  <p class="badges-title">Anders Andersen</p>
+
+  <div class="badges-grid">
+    {
+      badges.map((badge) => (
+        <div class="badge-card">
+          <img src={badge.icon} alt={badge.title} />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .badges-section {
+    padding: 2rem;
+
+    border-radius: 2rem;
+
+    background-color: var(--øremærke-gul);
+
+    width: fit-content;
+  }
+
+  .badges-title {
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+    font-weight: 700;
+  }
+
+  .badges-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem;
+  }
+
+  .badge-card {
+    width: 90px;
+
+    aspect-ratio: 1/1;
+
+    border-radius: 100%;
+
+    background-color: var(--white);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  .badge-card img {
+    width: 50%;
+
+    height: auto;
+  }
+</style>
