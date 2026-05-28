@@ -3,7 +3,7 @@ import CtaButton from "./cta_button.astro";
 
 const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
-const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/Nature/nicolasjaegergaard-nature-7045133.jpg", {
+const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/Nature/nicolasjaegergaard-nature-7045133_resultat.webp", {
   headers: { apikey: key },
 });
 const imgUrl = supaReq.ok ? supaReq.url : null;

@@ -1,7 +1,7 @@
 ---
 const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
-const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/Nature/kriemer-denmark-1619101_1920.jpg", {
+const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/public/Medie/Nature/kriemer-denmark-1619101_1920_resultat.webp", {
   headers: { apikey: key },
 });
 const imgUrl = supaReq.ok ? supaReq.url : null;
