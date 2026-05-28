@@ -3,49 +3,46 @@ import Oeremaerke from "../assets/Oeremaerke.webp";
 ---
 
 <section>
-  <div class="content-grid">
-    <div class="text-content">
-      <h2>Derfor er din hjælp vigtig</h2>
-      <p>
-        Det er virkelig, at du støtter naturen, fordi den betyder mere for os, end vi ofte tænker over. Skovene giver os ro, frisk luft og steder, hvor vi kan koble af fra en travl hverdag. Samtidig er de hjem for mange dyr og planter, som har svært
-        ved at overleve, når naturen forsvinder. Når du støtter et blot ved at benytte dig at dit Dankort, hjælper du faktisk med at beskytte noget, som både vi og fremtidige generationer får glæde af. Det handler ikke kun om naturen lige nu, men
-        også om hvilket Danmark vi ønsker at efterlade. Selv en lille støtte kan være med til at skabe en stor forskel på sigt
-      </p>
-    </div>
-    <div class="image-content">
-      <img src={Oeremaerke.src} alt="Øremærke illustration" />
-    </div>
+  <div class="text-content">
+    <h2>Derfor er din hjælp vigtig</h2>
+    <p class="p_standard">
+      Det er virkelig, at du støtter naturen, fordi den betyder mere for os, end vi ofte tænker over. Skovene giver os ro, frisk luft og steder, hvor vi kan koble af fra en travl hverdag. Samtidig er
+      de hjem for mange dyr og planter, som har svært ved at overleve, når naturen forsvinder. Når du støtter et blot ved at benytte dig at dit Dankort, hjælper du faktisk med at beskytte noget, som
+      både vi og fremtidige generationer får glæde af. Det handler ikke kun om naturen lige nu, men også om hvilket Danmark vi ønsker at efterlade. Selv en lille støtte kan være med til at skabe en
+      stor forskel på sigt
+    </p>
+  </div>
+  <div class="image-content">
+    <img src={Oeremaerke.src} alt="Øremærke illustration" />
   </div>
 </section>
 
 <style>
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 0.5fr;
-    gap: 4rem;
-    align-items: center;
-  }
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rlh;
+    row-gap: 0;
 
-  .text-content ul {
-    padding-left: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .text-content p,
-  .text-content li {
-    line-height: 1.6;
-  }
-
-  .image-content img {
-    width: 100%;
-  }
-
-  /* MOBILE */
-
-  @media (max-width: 768px) {
-    .content-grid {
-      grid-template-columns: 1fr;
+    .text-content {
+      flex-shrink: 1;
+      flex-grow: 1;
+      width: calc(70% - 1rlh);
+      display: flex;
+      flex-direction: column;
+      gap: 1rlh;
+    }
+    .image-content {
+      flex-shrink: 0;
+      flex-grow: 1;
+      min-width: calc(30% - 1rlh);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 100%;
+      }
     }
   }
 </style>

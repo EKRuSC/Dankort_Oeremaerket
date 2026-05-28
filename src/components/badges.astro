@@ -44,8 +44,8 @@ const badges = [
 ];
 ---
 
-<section class="badges-section">
-  <p class="badges-title">Anders Andersen</p>
+<div class="badges-section">
+  <p class="p_imgtext" id="badges_title">Anders Andersen</p>
 
   <div class="badges-grid">
     {
@@ -56,54 +56,40 @@ const badges = [
       ))
     }
   </div>
-</section>
+</div>
 
 <style>
   .badges-section {
-    padding: 2rem;
-
-    border-radius: 2rem;
-
+    padding: 2rlh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rlh;
+    align-items: center;
+    border-radius: 2rlh;
     background-color: var(--øremærke-gul);
-
-    width: fit-content;
-  }
-
-  .badges-title {
-    text-align: center;
-
-    margin-bottom: 2rem;
-
-    font-weight: 700;
   }
 
   .badges-grid {
+    width: 100%;
     display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, 5rlh);
+    justify-content: center;
+    gap: 2rlh;
   }
 
   .badge-card {
-    width: 90px;
-
     aspect-ratio: 1/1;
-
-    border-radius: 100%;
-
-    background-color: var(--white);
-
+    width: 5rlh;
+    padding: 1rlh;
     display: flex;
-
     justify-content: center;
-
     align-items: center;
+    border-radius: 100%;
+    background-color: var(--white);
   }
 
   .badge-card img {
-    width: 50%;
-
+    width: 100%;
     height: auto;
   }
 </style>

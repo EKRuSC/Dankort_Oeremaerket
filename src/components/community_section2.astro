@@ -3,8 +3,8 @@
   <div class="container">
     <div class="top">
       <div class="sorting_values">
-        <h3>København</h3>
-        <h3>Maj 2026</h3>
+        <p class="p_imgtext">København</p>
+        <p class="p_imgtext">Maj 2026</p>
       </div>
       <p class="p_standard">Her ser du, hvordan Dankort Øremærkets donationer vokser<br />- takket være daglige betalinger fra unge som dig.</p>
     </div>
@@ -14,28 +14,28 @@
         <!-- -->
         <div id="donation">
           <div class="value">
-            <p class="p_value">200.000.000 øre</p>
+            <p class="p_displayValue">200.000.000 øre</p>
           </div>
         </div>
         <p class="p_info">Som svarer til:</p>
         <p class="p_info">Eller:</p>
         <div id="area">
           <div class="value">
-            <p class="p_value">800 m²</p>
-            <p class="p_unit">skovareal</p>
+            <p class="p_displayValue">800 m²</p>
+            <p class="p_displayValue p_unit">skovareal</p>
           </div>
         </div>
         <div id="conversion">
           <div class="value">
-            <p class="p_value">20</p>
-            <p class="p_unit">fodboldbaner</p>
+            <p class="p_displayValue">20</p>
+            <p class="p_displayValue p_unit">fodboldbaner</p>
           </div>
         </div>
         <!-- -->
       </div>
       <!-- -->
       <form action="sort">
-        <label for="sort">Sortér efter:</label>
+        <label for="sort"><p class="p_imgtext">Sortér efter:</p></label>
         <select name="city" id="city">
           <option value="default">- By</option>
           <option value="København">København</option>
@@ -57,19 +57,7 @@
 </section>
 
 <style>
-  .p_value {
-    font-size: 64px;
-    font-weight: 800;
-  }
-  .p_unit {
-    font-size: 40px;
-    font-weight: 800;
-  }
   .p_info {
-    font-weight: 800;
-  }
-  label {
-    font-size: 24px;
     font-weight: 800;
   }
 
@@ -91,25 +79,35 @@
     }
 
     .top {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2rlh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      gap: 4rlh;
+      row-gap: 2rlh;
+      justify-content: end;
       /*-----*/
       .sorting_values {
+        flex-grow: 1;
+        flex-shrink: 0;
         padding-bottom: 1rlh;
         display: flex;
         flex-direction: row;
         align-items: end;
+        gap: 1rlh;
+        flex-wrap: wrap;
         /*| STYLING |*/
         color: var(--white);
         border-bottom: 2px solid var(--white);
         h3 {
+          flex-grow: 1;
           height: fit-content;
-          width: 100%;
+          min-width: fit-content;
+          width: 25%;
         }
       }
       .p_standard {
-        margin: -2rlh -2rlh 0 0;
+        width: fit-content;
+        margin: -2rlh -2rlh 0 -2rlh;
         padding: 1rlh 1rlh 2rlh 2rlh;
         /*| STYLING |*/
         border-bottom-left-radius: 2rlh;
@@ -118,11 +116,14 @@
     }
 
     .bottom {
-      display: grid;
-      grid-template-columns: 5fr 2fr;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 4rlh;
+      justify-content: center;
 
       .info {
+        flex-grow: 1;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr auto 1fr;
@@ -151,6 +152,7 @@
       }
 
       form {
+        flex-grow: 0.5;
         height: fit-content;
         padding: 2rlh;
         align-self: center;

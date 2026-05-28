@@ -19,8 +19,12 @@ const videoUrl = supaReq.ok ? supaReq.url : null;
     )
   }
   <h1 class="h1_hero">Dankort Øremærket</h1>
-  <p class="p_imgtext">Små betalinger kan blive til noget større, når vi handler sammen</p>
-  <CtaButton text="Læs mere om Dankort Øremærket" link="about" />
+  <div class="bottom">
+    <p class="p_imgtext">Små betalinger kan blive til noget større, når vi handler sammen</p>
+    <div class="button_wrapper">
+      <CtaButton text="Læs mere om Dankort Øremærket" link="about" />
+    </div>
+  </div>
 </section>
 
 <style>
@@ -35,6 +39,38 @@ const videoUrl = supaReq.ok ? supaReq.url : null;
     gap: 2rlh;
     border-radius: 2rlh;
     overflow: hidden;
+  }
+
+  .bottom {
+    grid-column: 1/3;
+    grid-row: 2;
+    z-index: 10;
+    height: fit-content;
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    gap: 6rlh;
+    row-gap: 2rlh;
+    /*-----*/
+    .p_imgtext {
+      flex-grow: 1;
+      width: 40%;
+      margin-right: -2rlh;
+    }
+    .button_wrapper {
+      flex-grow: 1;
+      height: fit-content;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      .cta_button {
+        /*| STYLING |*/
+        background-color: var(--øremærke-gul);
+      }
+    }
   }
 
   .hero-video {
@@ -67,17 +103,5 @@ const videoUrl = supaReq.ok ? supaReq.url : null;
     /*| STYLING |*/
     border-top-right-radius: 2rlh;
     background-color: var(--baggrund);
-  }
-
-  * {
-    .cta_button {
-      grid-column: 2;
-      grid-row: 2;
-      align-self: flex-end;
-      justify-self: flex-end;
-      z-index: 10;
-      /*| STYLING |*/
-      background-color: var(--øremærke-gul);
-    }
   }
 </style>

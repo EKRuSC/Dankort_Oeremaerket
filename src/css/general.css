@@ -29,6 +29,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10rlh;
+  section:not(.hero) {
+    width: 76vw;
+  }
 }
 footer {
   height: fit-content;
@@ -40,6 +43,9 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rlh;
 }
+/*----------+----------+----------*/
+
+/*----------| @MEDIA PROPS |----------*/
 @media screen and (width <= 1132px) {
   footer {
     margin-bottom: calc(2vw + 6rlh);
