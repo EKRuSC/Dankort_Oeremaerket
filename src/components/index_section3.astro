@@ -7,21 +7,24 @@ const supaReq = await fetch("https://aarkaexetshjvrlgtjff.supabase.co/storage/v1
   headers: { apikey: key },
 });
 const imgUrl = supaReq.ok ? supaReq.url : null;
-
 ---
 
 <section style={imgUrl ? `background-image: url(${imgUrl})` : ""}>
   <h2>Samarbejdet med<br />Den Danske Naturfond</h2>
-  <p class="p_standard">Gennem samarbejdet med Den Danske Naturfond hjælper Dankort med at give den danske natur mere plads til at gro og leve vildt.</p>
-  <CtaButton text="Se hvordan de arbejder" link="https://naturfonden.dk" />
+  <div class="bottom">
+    <div class="button_wrapper">
+      <CtaButton text="Se hvordan de arbejder" link="https://naturfonden.dk" />
+    </div>
+    <p class="p_standard">Gennem samarbejdet med Den Danske Naturfond hjælper Dankort med at give den danske natur mere plads til at gro og leve vildt.</p>
+  </div>
 </section>
 
 <style>
   section {
-    aspect-ratio: 2/1;
+    min-height: 32rlh;
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 4rlh;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10rlh;
     /*| STYLING |*/
     border-radius: 2rlh;
     background-size: cover;
@@ -29,31 +32,47 @@ const imgUrl = supaReq.ok ? supaReq.url : null;
 
     h2 {
       height: fit-content;
+      width: fit-content;
       padding: 1rlh 2rlh 2rlh 0;
       /*| STYLING |*/
       border-bottom-right-radius: 2rlh;
       background-color: var(--baggrund);
     }
 
-    .p_standard {
-      grid-column: 3;
+    .bottom {
       grid-row: 2;
-      width: fit-content;
-      padding: 2rlh 1rlh 1rlh 2rlh;
-      align-self: flex-end;
-      text-align: center;
-
-      /*| STYLING |*/
-      border-top-left-radius: 2rlh;
-      background-color: var(--baggrund);
-    }
-
-    .cta_button {
-      grid-row: 2;
-      margin: 2rlh;
-      align-self: flex-end;
-      /*| STYLING |*/
-      background-color: var(--øremærke-gul);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4rlh;
+      row-gap: 0;
+      /*-----*/
+      .p_standard {
+        flex-shrink: 0;
+        flex-grow: 1;
+        width: 50%;
+        padding: 2rlh 1rlh 1rlh 2rlh;
+        align-self: flex-end;
+        justify-content: flex-end;
+        /*| STYLING |*/
+        border-top-left-radius: 2rlh;
+        background-color: var(--baggrund);
+      }
+      .button_wrapper {
+        flex-grow: 1;
+        height: fit-content;
+        min-width: fit-content;
+        width: 25%;
+        align-self: flex-end;
+        display: flex;
+        justify-content: center;
+        .cta_button {
+          margin: 2rlh;
+          /*| STYLING |*/
+          background-color: var(--øremærke-gul);
+        }
+      }
     }
   }
 </style>

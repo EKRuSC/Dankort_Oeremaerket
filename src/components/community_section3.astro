@@ -3,54 +3,62 @@ import DinBetaling from "../assets/DinBetaling.webp";
 ---
 
 <section>
-  <div class="content-grid">
-    <div class="text-content">
-      <h2>Banker og butikker der bidrager</h2>
-      <p>Flere banker og butikker i Danmark har valgt at være en del af samarbejdet omkring Dankort Øremærket.</p>
-      <p>Når en betaling gennemføres med Dankort, går der altid 1 øre til initiativet fra Dankort. Nogle samarbejdspartnere vælger også selv at bidrage med 1 øre pr. betaling.</p>
-      <p>Det betyder, at en enkelt betaling kan udløse op til 3 øre i støtte:</p>
-      <ul>
-        <li>1 øre fra Dankort</li>
-        <li>1 øre fra banken</li>
-        <li>1 øre fra butikken</li>
-      </ul>
-      <p>Hvis betalingen sker med et Dankort fra en bank eller i en butik, som ikke er en del af samarbejdet, bidrager Dankort stadig med 1 øre.</p>
-      <p>På den måde kan små bidrag fra mange forskellige aktører være med til at skabe noget større sammen.</p>
-    </div>
-    <div class="image-content">
-      <img src={DinBetaling.src} alt="Din betaling illustration" />
-    </div>
+  <div class="text-content">
+    <h2>Banker og butikker der bidrager</h2>
+    <p class="p_standard">Flere banker og butikker i Danmark har valgt at være en del af samarbejdet omkring Dankort Øremærket.</p>
+    <p class="p_standard">Når en betaling gennemføres med Dankort, går der altid 1 øre til initiativet fra Dankort. Nogle samarbejdspartnere vælger også selv at bidrage med 1 øre pr. betaling.</p>
+    <p class="p_standard">Det betyder, at en enkelt betaling kan udløse op til 3 øre i støtte:</p>
+    <ul>
+      <li>1 øre fra Dankort</li>
+      <li>1 øre fra banken</li>
+      <li>1 øre fra butikken</li>
+    </ul>
+    <p class="p_standard">Hvis betalingen sker med et Dankort fra en bank eller i en butik, som ikke er en del af samarbejdet, bidrager Dankort stadig med 1 øre.</p>
+    <p class="p_standard">På den måde kan små bidrag fra mange forskellige aktører være med til at skabe noget større sammen.</p>
+  </div>
+  <div class="image-content">
+    <img src={DinBetaling.src} alt="Din betaling illustration" />
   </div>
 </section>
 
 <style>
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 0.5fr;
-    gap: 4rem;
-    align-items: center;
-  }
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  .text-content ul {
-    padding-left: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .text-content p,
-  .text-content li {
-    line-height: 1.6;
-  }
-
-  .image-content img {
-    width: 100%;
-  }
-
-  /* MOBILE */
-
-  @media (max-width: 768px) {
-    .content-grid {
-      grid-template-columns: 1fr;
+    .text-content {
+      flex-shrink: 1;
+      flex-grow: 1;
+      min-width: 21rlh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rlh;
+      h2 {
+        margin-bottom: 0.5rlh;
+      }
+      ul {
+        margin: 0.5rlh 0;
+        padding-left: 1rlh;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rlh;
+      }
+    }
+    .image-content {
+      flex-shrink: 0;
+      flex-grow: 1;
+      height: 30rlh;
+      width: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 4rlh;
+      img {
+        height: 150%;
+      }
     }
   }
 </style>

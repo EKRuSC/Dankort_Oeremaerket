@@ -1,10 +1,11 @@
 ---
 import CtaButton from "./cta_button.astro";
+import Oeremaerke from "../assets/Oeremaerke.webp";
 ---
 
 <section>
-  <h2>Små bidrag - Fælles betydning</h2>
   <div class="content">
+    <h2>Små bidrag - Fælles betydning</h2>
     <div class="text">
       <p class="p_standard">Mange tænker ikke over hvilket betalingskort de bruger i hverdagen. Med Dankort Øremærket bliver daglige betalinger til små bidrag, der sammen kan gøre en forskel.</p>
       <p class="p_standard">
@@ -12,10 +13,10 @@ import CtaButton from "./cta_button.astro";
         små bidrag vokse over tid.
       </p>
       <p class="p_standard">På vores impact dashboard kan du se, hvordan donationerne udvikler sig over tid. Her bliver fællesskabets samlede bidrag visualiseret gennem tal og konkrete eksempler.</p>
+      <CtaButton text="Bliv en del af fællesskabet" link="community" />
     </div>
-    <div id="temp_icon"><p class="p_temp">1 ØRE</p></div>
+    <div id="icon"><img src={Oeremaerke.src} alt="Øremærke-ikon" /></div>
   </div>
-  <CtaButton text="Bliv en del af fællesskabet" link="community" />
 </section>
 
 <style>
@@ -26,32 +27,38 @@ import CtaButton from "./cta_button.astro";
   }
 
   .content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rlh;
+    row-gap: 2rlh;
     /*-----*/
     .text {
+      flex-grow: 1;
+      height: fit-content;
+      min-width: 21rlh;
+      width: calc(75% - 2rlh);
+      max-width: 76vw;
       display: flex;
       flex-direction: column;
       gap: 1rlh;
     }
-    #temp_icon {
-      padding: 2rlh;
+    #icon {
+      flex-grow: 1;
+      min-width: 12rlh;
+      width: 25%;
       display: flex;
-      align-items: center;
+      align-items: start;
       justify-content: center;
-      .p_temp {
-        height: fit-content;
-        width: fit-content;
-        padding: 1rlh;
-        font-size: 50px;
-        background-color: var(--øremærke-gul);
-        transform: rotate(15deg);
+      img {
+        width: 100%;
+        max-width: 35vw;
       }
     }
   }
-
   * {
     .cta_button {
+      margin-top: 1rlh;
       background-color: var(--dankort-rød);
       color: var(--white);
     }

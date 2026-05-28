@@ -5,10 +5,10 @@ import CtaButton from "./cta_button.astro";
 <section>
   <h2>Donationsbeløb 2026</h2>
   <div class="dashboard">
-    <div>
-      <p class="p_counter">200.000.000 øre</p>
+    <p class="p_displayValue">200.000.000 øre</p>
+    <div class="button_wrapper">
+      <CtaButton text="Følg udviklingen" link="community" />
     </div>
-    <CtaButton text="Følg udviklingen" link="community" />
   </div>
 </section>
 
@@ -17,36 +17,37 @@ import CtaButton from "./cta_button.astro";
     display: flex;
     flex-direction: column;
     gap: 2rlh;
+
     .dashboard {
       padding: 1rlh;
-      display: grid;
-      grid-template-columns: 1fr auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 1rlh;
+      row-gap: 2rlh;
       align-items: center;
       /*| STYLING |*/
       background-color: var(--grey_2);
       border-radius: 2rlh;
 
-      div {
-        height: fit-content;
-        width: 100%;
+      .p_displayValue {
+        flex-grow: 100;
         padding: 1rlh;
+        text-align: center;
         /*| STYLING |*/
-        background-color: var(--white);
         border-radius: 2rlh;
-        /*-----*/
-        .p_counter {
-          text-align: center;
-          font-size: 64px;
-          font-weight: 800;
-        }
+        background-color: var(--white);
       }
-
-      .cta_button {
-        margin: 0 1rlh;
-        /*| STYLING |*/
-        background-color: var(--dankort-rød);
-        color: var(--white);
+      .button_wrapper {
+        flex-grow: 1;
+        padding: 0 1rlh;
+        display: flex;
+        justify-content: center;
+        .cta_button {
+          /*| STYLING |*/
+          background-color: var(--dankort-rød);
+          color: var(--white);
+        }
       }
     }
   }

@@ -9,7 +9,6 @@ const VIDEO_URL = "https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/pu
 <section>
   <h2>Øremærkets kampagner</h2>
   <div class="container">
-
     <!-- Post 1: Image -->
     <div class="post image-post">
       <img src={IMAGE_URL1} alt="Kampagne billede 1" />
@@ -27,7 +26,6 @@ const VIDEO_URL = "https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/pu
       <img src={IMAGE_URL2} alt="Kampagne billede 2" />
       <CtaButton text="TikTok" />
     </div>
-
   </div>
 </section>
 
@@ -51,7 +49,7 @@ const VIDEO_URL = "https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/pu
 
     .container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(12rlh, 1fr));
       gap: 2rlh;
     }
 
@@ -64,15 +62,12 @@ const VIDEO_URL = "https://aarkaexetshjvrlgtjff.supabase.co/storage/v1/object/pu
       justify-content: end;
       /*| STYLING |*/
       border-radius: 2rlh;
-      background-color: var(--lime-green_1);
       overflow: hidden;
       position: relative;
       /*-----*/
       .cta_button {
         position: relative;
-        z-index: 1;
-        width: 80%;
-        padding: 2rlh;
+        width: fit-content;
         /*| STYLING |*/
         border-radius: 2rlh;
         background-color: var(--øremærke-gul);
