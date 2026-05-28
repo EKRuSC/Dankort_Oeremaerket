@@ -69,5 +69,56 @@ html {
   .p_unit {
     font-size: 32px;
   }
+  @media screen and (width <= 1132px) {
+    h1 {
+      font-size: calc(48px * 0.75);
+    }
+    .h1_hero {
+      font-size: calc(64px * 0.75);
+    }
+    h2 {
+      font-size: calc(40px * 0.75);
+    }
+    h3 {
+      font-size: calc(24px * 0.75);
+    }
+    .p_standard {
+      line-height: 150%;
+    }
+    .p_nav {
+      font-size: calc(20px * 0.75);
+    }
+    .p_foot {
+      font-size: calc(24px * 0.75);
+    }
+    .p_imgtext {
+      font-size: calc(24px * 0.75);
+    }
+    .p_cta {
+      font-size: calc(initial * 0.75);
+    }
+    .p_displayValue {
+      font-size: calc(64px * 0.75);
+    }
+    .p_unit {
+      font-size: calc(32px * 0.75);
+    }
+  }
+  @media screen and (width <= 900px) {
+    .p_displayValue {
+      font-size: calc(64px * 0.5);
+    }
+    .p_unit {
+      font-size: calc(32px * 0.5);
+    }
+  }
+  @media screen and (width <= 550px) {
+    .p_displayValue {
+      font-size: calc(64px * 0.4);
+    }
+    .p_unit {
+      font-size: calc(32px * 0.4);
+    }
+  }
   /*----------+----------+----------*/
 }
