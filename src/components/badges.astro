@@ -50,8 +50,10 @@ const badges = [
   <div class="badges-grid">
     {
       badges.map((badge) => (
-        <div class="badge-card">
+        <div class={`badge-card ${badge.unlocked ? "unlocked" : "locked"}`}>
           <img src={badge.icon} alt={badge.title} />
+
+          <p>{badge.title}</p>
         </div>
       ))
     }
@@ -91,5 +93,55 @@ const badges = [
   .badge-card img {
     width: 100%;
     height: auto;
+  }
+
+  .badge-card p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* UNLOCKED */
+
+  .unlocked {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1);
+  }
+
+  .unlocked:hover {
+    transform: scale(1.05);
+  }
+
+  /* LOCKED */
+
+  .locked {
+    opacity: 0.4;
+    filter: grayscale(1);
+  }
+
+  @media (max-width: 768px) {
+    .badges-section {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    .badges-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .badge-card {
+      width: 100px;
+    }
+
+    .badges-title {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-card p {
+      font-size: 0.7rem;
+    }
   }
 </style>
