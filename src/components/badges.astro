@@ -52,7 +52,6 @@ const badges = [
       badges.map((badge) => (
         <div class={`badge-card ${badge.unlocked ? "unlocked" : "locked"}`}>
           <img src={badge.icon} alt={badge.title} />
-
           <p>{badge.title}</p>
         </div>
       ))
@@ -82,22 +81,25 @@ const badges = [
   .badge-card {
     aspect-ratio: 1/1;
     width: 5rlh;
-    padding: 1rlh;
+    padding-top: 0.25rlh;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
     background-color: var(--white);
   }
 
   .badge-card img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 75%;
   }
 
   .badge-card p {
-    font-size: 0.8rem;
-    font-weight: 600;
+    max-width: 5rlh;
+    font-size: 14px;
+    font-weight: 800;
     text-align: center;
   }
 
@@ -105,7 +107,7 @@ const badges = [
 
   .unlocked {
     opacity: 1;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: scale(1);
   }
 
@@ -118,30 +120,5 @@ const badges = [
   .locked {
     opacity: 0.4;
     filter: grayscale(1);
-  }
-
-  @media (max-width: 768px) {
-    .badges-section {
-      width: 100%;
-      padding: 1.5rem;
-    }
-
-    .badges-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
-    .badge-card {
-      width: 100px;
-    }
-
-    .badges-title {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .badge-card p {
-      font-size: 0.7rem;
-    }
   }
 </style>
